@@ -1,236 +1,884 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>AUB Mock</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
-  </head>
-  <body>
-    <!--full body-->
-    <div class="container">
-      <div class="header">
-        <div class="logo">
-          <img src="./AUB_Logo.jpg">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  
+  <style>
+  
+.live-topbar {
+    height: 70px;
+    background: linear-gradient(to bottom, #289CE4 0%, #016798 100%);
+    /* background:  #297FA7; */
+     color: #fff; 
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0 0 0 .6666666667rem;
+    /* position: relative; */
+}
+:host >>> .main-header {
+  margin-left: 0px;
+}
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+ul.timeline:before {
+    content: ' ';
+    background: #D4D9DF;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #22C0E8;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+  </style>
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div class="wrapper">
+
+  <!-- Preloader -->
+ <!-- <div class="preloader flex-column justify-content-center align-items-center" style="height:0">
+    <img class="animation__shake" src="assets/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+  </div>  -->
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light live-topbar " style="margin-left: 1px;">
+    <!-- Left navbar links -->
+    <!-- <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a> -->
+      
+          <div class= "col-3">
+            <img src ="dist/img/AUBLogo.png" width="130px" >
         </div>
-        <div class="icons">
-          <i class="fa fa-user-circle-o" aria-hidden="true"></i>	
-          <i class="fa fa-question-circle" aria-hidden="true"></i>	
-          <i class="fa fa-cog"></i>
-          <i class="fa fa-bell"></i>
-        </div>
-        <div class="searchbar">
-          <div class="search">
-            <form action="#">
-              <input type="text" placeholder=" Search" name="search">
-              <button type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
-            </button>
-          </form>
-          </div>
-        </div>
-        
-      </div>
-      <div class="main">
-        <div class="navbar">
-          <div class="navbar">
-            <a href="#home">Home</a>
-            <a href="#news">News</a>
-            <div class="dropdown">
-              <button class="dropbtn">Dropdown 
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
-              </div>
-            </div>
-            <a href="#sec1">Section 1</a> 
-            <a href="#sec2">Section 2</a> 
-            <a href="#sec3">Section 3</a> 
-          </div>
-        </div>
-        <div class="content">
-          <div class="leftTab">
-            <div class="tabPane">
-              <div class="tab">
-                <button class="tablinks" onclick="openPage(event, 'Tab1')" id="defaultTab">Home</button>
-                <button class="tablinks" onclick="openPage(event, 'Tab2')">Welcome XYZ</button>
-                <button class="tablinks" onclick="openPage(event, 'Tab3')">Requests</button>
-                <button class="tablinks" onclick="openPage(event, 'Tab4')">360 View</button>
-                
-              </div>
-              
-              <!-- Tab content -->
-              <div id="Tab1" class="tabcontent">
-                <div class="slideshow-container">
-                  <div class="mySlides fade">                   
-                    <img src="./Internet-Banking-630-px-by-330-px.jpg" height="300" width="100%">                    
-                  </div>
-                  <div class="mySlides fade">                    
-                    <img src="./AUB.jpg" height="300" width="100%" >                    
-                  </div>                 
-                  <div class="mySlides fade">                   
-                    <img src="./AUB-Double-Swipe-Internet-Banking-630x360.jpg" height="300" width="100%" >                    
-                  </div>
-                  
-                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                  
-                  </div>
-                  <br>
-                  
-                  <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span> 
-                    <span class="dot" onclick="currentSlide(2)"></span> 
-                    <span class="dot" onclick="currentSlide(3)"></span> 
-                  </div>
-                  
-              </div>
-              
-              <div id="Tab2" class="tabcontent">
-                <h3>Tab 2</h3>
-                <p>This is my tab</p>
-                <h3>Tab 3</h3>
-                <p>Requests Tab</p>
-              </div>
-              
-              <div id="Tab3" class="tabcontent">
-                <div class="tab">                  
-                  <button class="tablinks" onclick="openPage(event, 'pending')">Pending</button>
-                  <button class="tablinks" onclick="openPage(event, 'Tab3')">Approved</button>
-                  <button class="tablinks" onclick="openPage(event, 'Tab4')">Rejected</button>                  
-                </div>
-                
-                <!-- Tab content -->       
-                
-                <div id="pending" class="tabcontent">
-                  <h3>Pending Requests</h3>                  
-                </div>                
-                <div id="Tab3" class="tabcontent">
-                  <h3>Tab 3</h3>
-                  <p>Requests Tab</p>
-                  <h3>Tab 3</h3>
-                  <p>Requests Tab</p>
-                  
-                </div>
-                <div id="Tab4" class="tabcontent">
-                  <h3>Tab 4</h3>
-                  <p>360 View Tab</p>
-                </div>
-                <div id="Tab5" class="tabcontent">
-                  <h3>Tab 5</h3>
-                  <p> Tab 5</p>
-                </div>
-                
-              </div>
-              <div id="Tab4" class="tabcontent">
-                <h3>Tab 4</h3>
-                <p>360 View Tab</p>
-              </div>
-              <div id="Tab5" class="tabcontent">
-                <h3>Tab 5</h3>
-                <p> Tab 5</p>
-              </div>
-            </div>
-            <div class="branchCircular">
-              <h2>Branch Circulars</h2> 
-              <marquee direction="up"  scrollamount="1" height="50%">
-                <a href="#"><p>From 1st May 2021, the interest rates will be changed.</p></a>
-                <a href="#"><p>There will be a meeting for re-evaluation of this pandemic situation on 25 April, 2021.</p></a>
-            </marquee>
-            </div>
-            <div class="aubForms">
-              <h2>AUB Forms</h2>
-              <p><a href="#">New User Form</a></p>
-              <p><a href="#">Complaint Form</a></p>
-              <p><a href="#">KYC Form</a></p>
-              <p><a href="#">New Offers Form</a></p>
-            </div>
-          </div>
           
-          <div class="rightTab">
-            <div class="quickLinks">
-              <h2> Quick Links </h2>
-              <p> 
-                <a href="https://www.ahliunited.com.kw/en/home">AUB Website </a>
-              </p>             
-              <p>
-                <a href="#">AUB KYC Portal </a>
-              </p>             
-              <p>
-                <a href="#">New Offers </a>
-              </p> 
-              
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm" style="width: 400px;">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                
+              </div>
             </div>
-            <div class="alShamil">
-              <a href="#"><img src="./alshamil.PNG" height="100%" width="100%"><a></a>
-            </div>
-            <div class="aubLinks">
-              <h2> Links </h2>
-              <p><a href="#">AUB Kuwait</a></p>
-              <p><a href="#">AUB Bahrain</a></p>
-              <p><a href="#">Terms and Conditions</a></p>
-              <p><a href="#">Contact Us</a></p>
-              <p><a href="#">Feedback</a></p>
-            </div>
-          </div>
+          </form>
         </div>
+      
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+       <!--  <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a> -->
+        
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown" >
+        <a class="nav-link" data-toggle="dropdown" href="#" style="color:white">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="assets/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="assets/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="assets/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#" style="color:white">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button" style="color:white">
+          <i class="fas fa-user-cog"></i>
+        </a>
+      </li>
+      <li class="nav-item" >
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button" style="color:white">
+          <i class="fas fa-question-circle"></i>
+        </a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+    <div class="container">
+      
+      <div class="collapse navbar-collapse order-3" id="navbarCollapse" style="border-block: black;border-style: outset;">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav" >
+         
+          <li class="nav-item" styel="color: black;
+          font-size: 18px;">
+            <a href="index3.html" class="nav-link" style="color: black;
+            font-size: 18px;">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link" tyle="color: black;
+            font-size: 18px;">Contact</a>
+          </li>
+          <li class="nav-item dropdown" >
+            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle" tyle="color: black;
+            font-size: 18px;">Dropdown</a>
+            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+              <li><a href="#" class="dropdown-item">Some action </a></li>
+              <li><a href="#" class="dropdown-item">Some other action</a></li>
+
+              <li class="dropdown-divider"></li>
+
+              <!-- Level two dropdown-->
+              <li class="dropdown-submenu dropdown-hover">
+                <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Hover for action</a>
+                <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+                  <li>
+                    <a tabindex="-1" href="#" class="dropdown-item">level 2</a>
+                  </li>
+
+                  <!-- Level three dropdown-->
+                  <li class="dropdown-submenu">
+                    <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
+                    <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
+                      <li><a href="#" class="dropdown-item">3rd level</a></li>
+                      <li><a href="#" class="dropdown-item">3rd level</a></li>
+                    </ul>
+                  </li>
+                  <!-- End Level three -->
+
+                  <li><a href="#" class="dropdown-item">level 2</a></li>
+                  <li><a href="#" class="dropdown-item">level 2</a></li>
+                </ul>
+              </li>
+              <!-- End Level two -->
+            </ul>
+          </li>
+        </ul>
+
+        
+
+      <!-- Right navbar links -->
       </div>
     </div>
-    <script>
-      function openPage(evt, pageName) {
-      // Declare all variables
-      var i, tabcontent, tablinks;
+  </nav>
+  
 
-      // Get all elements with class="tabcontent" and hide them
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper" style="margin-left: 1px;">
+    <!-- Content Header (Page header) -->
+    <!-- <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Dashboard</h1>
+          </div>/.col -->
+         <!--  <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard v1</li>
+            </ol> 
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- /.content-header -->
 
-      // Get all elements with class="tablinks" and remove the class "active"
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <!-- Small boxes (Stat box) -->
+        <div class="row">
+          
+          <!-- ./col -->
+        </div>
+        <!-- /.row -->
+        <!-- Main row -->
+        <div class="row">
+          <!-- Left col -->
+          <section class="col-lg-9 connectedSortable">
+            <!-- Custom tabs (Charts with tabs)-->
+            <div class="col-12 col-sm-12">
+              <div class="card card-primary card-tabs">
+                <div class="card-header p-0 pt-1" style="background-color: #0e7096;">
+                  <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-one-home" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-one-profile" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-one-messages" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">Messages</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" id="custom-tabs-one-settings-tab" data-toggle="pill" href="#custom-tabs-one-settings" role="tab" aria-controls="custom-tabs-one-settings" aria-selected="false">Settings</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="card-body">
+                  <div class="tab-content" id="custom-tabs-one-tabContent">
+                    <div class="tab-pane fade show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin malesuada lacus ullamcorper dui molestie, sit amet congue quam finibus. Etiam ultricies nunc non magna feugiat commodo. Etiam odio magna, mollis auctor felis vitae, ullamcorper ornare ligula. Proin pellentesque tincidunt nisi, vitae ullamcorper felis aliquam id. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin id orci eu lectus blandit suscipit. Phasellus porta, ante et varius ornare, sem enim sollicitudin eros, at commodo leo est vitae lacus. Etiam ut porta sem. Proin porttitor porta nisl, id tempor risus rhoncus quis. In in quam a nibh cursus pulvinar non consequat neque. Mauris lacus elit, condimentum ac condimentum at, semper vitae lectus. Cras lacinia erat eget sapien porta consectetur.
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-one-profile" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                       Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, dfdsljfkdsjfklsdjfkldsnvfjjfvkdsmvkdmvkdv       kdjfkldsfjkldsjfkdsfl;sjasflnsvklndskfkdslnkln kfkdsjfkkdsnvidsjsidjfklndskvnjijds dsnjdsvdsijvidsfvndsvlkdjinisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                    </div>
+                    <div class="tab-pane fade" id="custom-tabs-one-messages" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
+                      <div class="row">
+                        <div class="col-md-6" style="float: left;">                        
+                          <div>
+                            <div style="height:126px;border: 3px solid rgb(65, 145, 199);">
+                              <i class="fas fa-user icon fa-4x " style="float: left;height: 120px;width:100px;padding: 20px;color:rgb(241, 241, 247);background: rgb(65, 145, 199);" ></i>
+                              <b>Customer Name : </b>ABDULAZIZ 
+                              <br>
+                              <b>CIF : </b>12595999
+                              <br>
+                              <b>Mobile : </b>66667707 - Zain
+                              <br>
+                              <b>Email : </b>Abdul@yahoo.com
+                              <br>
+                              <b>Customer Type : </b>Premium Banking                 
+                            </div>
+                          </div>
+                      </div>
+                      <div class="col-md-6" style="float: right;">
+                          <div>
+                            <div style="height:126px;border: 3px solid rgb(65, 145, 199);">
+                              <i class="fas fa-university icon fa-4x" style="float: left;height: 120px;width:100px;padding: 20px;color:rgb(241, 241, 247);background: rgb(65, 145, 199);"></i>
+                              <b>Registered for IB/MB : </b> <i class="fas fa-check  bg-green"></i>
+                              <br>
+                              <b>Active : </b><i class="fas fa-times bg-red"></i>
+                              <br>
+                              <b>Last Login : </b> 24-Apr-21 (MB)
+                              <br>
+                              <b>ATM Card : </b> <i class="fas fa-check  bg-green"></i>
+                              <br>
+                              <b>Digital User : </b> <i class="fas fa-check  bg-green"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-5" style="float:left;">
+                          Left Widget
+                          <div class="card card-danger">
+                              <div class="card-header" style="background:  rgb(65, 145, 199);">
+                                <h3 class="card-title">Current Portfolio</h3>
+                              </div>
+                              <div class="card-body" style="font-size:  15px;">
+                                <b>Account Type : </b>
+                                <br>
+                                <i class="fas fa-circle " style="color: forestgreen;"></i>12260551 KWD &emsp; Alert <i class="fas fa-check  bg-green"></i> &emsp; Signature <i class="fas fa-check  bg-green"></i>
+                                <br>
+                                <i class="fas fa-circle " style="color: forestgreen;"></i>12260551 KWD &emsp; Alert <i class="fas fa-check  bg-green"></i> &emsp; Signature <i class="fas fa-check  bg-green"></i>
+                                <br>
+                                <br>
+                                <b>Debit Card : </b>
+                                <br>
+                                <i class="fas fa-circle " style="color: forestgreen;"></i>532674XXXXXX1487 &emsp; NFC &emsp; PLATINUM DEBIT
+                                <br>
+                                <i class="fas fa-circle " style="color: forestgreen;"></i>532674XXXXXX1487 &emsp; NFC &emsp; PLATINUM DEBIT
+                              </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7" style="float:right;border-style: solid;">
+                          Right Widget
+                          <div class="row">                           
+                            
+                            <div class="upper">
+                              <div class="" style="float:left;width: 60%;">
+                                <div class="card card-success">
+                                    <div class="card-header">
+                                      <h3 class="card-title" style="font-size: 15px;">Potential products for cross selling</h3>
+                                    </div>
+                                    <div class="card-body">
+                                      <i class="fas fa-circle "></i>&emsp; <b>Finance</b> &emsp;&emsp;&emsp; <button class="btn bg-cyan">Apply</button>  <button class="btn bg-cyan">Details</button>
+                                      <br>
+                                      <br>
+                                      <i class="fas fa-circle "></i>&emsp;<b>Credit Card</b> &emsp;&ensp;&nbsp; <button class="btn bg-cyan">Apply</button>  <button class="btn bg-cyan">Details</button>
+                                      <br>
+                                      <br>
+                                      <i class="fas fa-circle "></i>&emsp; <b>Prepaid Card</b> &ensp;&nbsp; <button class="btn bg-cyan">Apply</button>  <button class="btn bg-cyan">Details</button>
+                                    </div>
+                                  </div>
+                              </div>
+                              <div class="" style="float:right;width: 35%;margin-left: 10px;">
+                                
+                                <div class="timeline" >   
+                                  <div>
+                                    <i class="fas fa-exclamation bg-red"></i>
+                                    <div class="timeline-item" >                                      
+                                      <h4 class="timeline-header no-border">KYC Expired</h4>
+                                    </div>
+                                  </div>
+                                  <div>
+                                    <i class="fas fa-exclamation bg-green"></i>
+                                    <div class="timeline-item" >                                      
+                                      <h4 class="timeline-header no-border">Client ID is up to date</h4>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-12">
+                              <div class="card card-primary">
+                                <div class="card-header">
+                                  <h3 class="card-title">Channel-wise Analysis of Financial Transactions</h3>
+                                </div>
+                                <div class="card-body">
+                                  
+                                  <div style="float: left;height: 140px;width: 50%;">
+                                    <canvas id="pieChart" style="min-height: 100px; height: 100px; max-height: 200px; max-width: 100%;"></canvas>
+                                  </div>
+                                  <div style="float: right;height: 140px;width: 50%;">
+                                    <canvas id="donutChart" style="min-height: 100px; height: 150px; max-height: 200px; max-width: 100%;"></canvas>
+                                  </div>    
+                                  
+                                </div>
+                                </div>
+                            </div>
+                          </div>
+                          
+                          
+                        </div>
+                      </div>
+                    </div>
+                      
+                      
+                    <div class="tab-pane fade" id="custom-tabs-one-settings" role="tabpanel" aria-labelledby="custom-tabs-one-settings-tab">
+                       
+                       <div class="col-12 col-sm-12">
+                        <div class="card card-primary card-tabs">
+                          <div class="card-header p-0 pt-1" style="background-color: #0b7199;">
+                            <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link active" id="custom-tabs-one-home-tab" data-toggle="pill" href="#custom-tabs-pending" role="tab" aria-controls="custom-tabs-one-home" aria-selected="true">Pending</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="custom-tabs-one-profile-tab" data-toggle="pill" href="#custom-tabs-approved" role="tab" aria-controls="custom-tabs-one-profile" aria-selected="false">Approved</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="custom-tabs-one-messages-tab" data-toggle="pill" href="#custom-tabs-rejected" role="tab" aria-controls="custom-tabs-one-messages" aria-selected="false">Rejected</a>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="card-body">
+                            <div class="tab-content" id="custom-tabs-one-tabContent">
+                              <div class="tab-pane fade show active" id="custom-tabs-pending" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
+                                 
+                                 <div class="card">
+                                   <!--Table header
+                                  <div class="card-header">
+                                    <h3 class="card-title">Pending Requests</h3>
+                                  </div>
+                                  -->
+                                  <!-- /.card-header -->
+                                  
+                                  <div class="card-body">
+                                    <table id="example1" class="table table-bordered table-striped">
+                                      <thead>
+                                      <tr>
+                                        <th>Request ID</th>
+                                        <th>Title</th>
+                                        <th>System</th>
+                                        <th>Request Type</th>
+                                        <th>Assigned To</th>
+                                        <th>Request Status</th>
+                                        <th>Approval Status</th>
+                                        <th>Link</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody>
+                                      <tr>
+                                        <td>CR19070071</td>
+                                        <td>SDL Accounts(V-2.00)</td>
+                                        <td>BO/MI-BO-Reports/MI Universe</td>
+                                        <td>Change Request</td>
+                                        <td>59420 - Ann Francis</td>
+                                        <td>Closed</td>
+                                        <td>Pending</td>
+                                        <td><a href="#">Link</a></td>
+                                      </tr>
+                                      <tr>
+                                        <td>CR19070075</td>
+                                        <td>SDL Accounts(V-2.00)</td>
+                                        <td>BO/MI-BO-Reports/MI Universe</td>
+                                        <td>Change Request</td>
+                                        <td>59420 - Ann Francis</td>
+                                        <td>Closed</td>
+                                        <td>Pending</td>
+                                        <td><a href="#">Link</a></td>
+                                      </tr>
+                                      
+                                      </tbody>
+                                      
+                                    </table>
+                                  </div>
+                                  <!-- /.card-body -->
+                                </div>
+                              </div>
+                              <div class="tab-pane fade" id="custom-tabs-approved" role="tabpanel" aria-labelledby="custom-tabs-one-profile-tab">
+                                 Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, dfdsljfkdsjfklsdjfkldsnvfjjfvkdsmvkdmvkdv       kdjfkldsfjkldsjfkdsfl;sjasflnsvklndskfkdslnkln kfkdsjfkkdsnvidsjsidjfklndskvnjijds dsnjdsvdsijvidsfvndsvlkdjinisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                              </div>
+                              <div class="tab-pane fade" id="custom-tabs-rejected" role="tabpanel" aria-labelledby="custom-tabs-one-messages-tab">
+                                 Morbi turpis dolor, vulputate vitae felis non, tincidunt congue mauris. Phasellus volutpat augue id mi placerat mollis. Vivamus faucibus eu massa eget condimentum. Fusce nec hendrerit sem, ac tristique nulla. Integer vestibulum orci odio. Cras nec augue ipsum. Suspendisse ut velit condimentum, mattis urna a, malesuada nunc. Curabitur eleifend facilisis velit finibus tristique. Nam vulputate, eros non luctus efficitur, ipsum odio volutpat massa, sit amet sollicitudin est libero sed ipsum. Nulla lacinia, ex vitae gravida fermentum, lectus ipsum gravida arcu, id fermentum metus arcu vel metus. Curabitur eget sem eu risus tincidunt eleifend ac ornare magna.
+                              </div>
+                              
+                            </div>
+                          </div>
+                          <!-- /.card -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- /.card -->
+              </div>
+            </div>
+            <!-- /.card -->
 
-      // Show the current tab, and add an "active" class to the button that opened the tab
-      document.getElementById(pageName).style.display = "block";
-      evt.currentTarget.className += " active";
+            <!-- DIRECT CHAT -->
+            <div class="card card-success">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12 col-lg-6 col-xl-4">
+                    <div class="card mb-2 bg-gradient-dark">
+                      <img class="card-img-top" src="dist/img/photo1.png" alt="Dist Photo 1">
+                      <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        <h5 class="card-title text-primary text-white">Card Title</h5>
+                        <p class="card-text text-white pb-2 pt-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor.</p>
+                        <a href="#" class="text-white">Last update 2 mins ago</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-lg-6 col-xl-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="dist/img/photo2.png" alt="Dist Photo 2">
+                      <div class="card-img-overlay d-flex flex-column justify-content-center">
+                        <h5 class="card-title text-white mt-5 pt-2">Card Title</h5>
+                        <p class="card-text pb-2 pt-1 text-white">
+                          Lorem ipsum dolor sit amet, <br>
+                          consectetur adipisicing elit <br>
+                          sed do eiusmod tempor.
+                        </p>
+                        <a href="#" class="text-white">Last update 15 hours ago</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-12 col-lg-6 col-xl-4">
+                    <div class="card mb-2">
+                      <img class="card-img-top" src="dist/img/photo3.jpg" alt="Dist Photo 3">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title text-primary">Card Title</h5>
+                        <p class="card-text pb-1 pt-1 text-white">
+                          Lorem ipsum dolor <br>
+                          sit amet, consectetur <br>
+                          adipisicing elit sed <br>
+                          do eiusmod tempor. </p>
+                        <a href="#" class="text-primary">Last update 3 days ago</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--/.direct-chat -->
+            <div class="row">
+            <div class="col-md-8">
+              <div class="card card-default">
+                <div class="card-body">
+                  <div class="callout callout-info">
+                    <h5><b> Branch Circulars</b></h5>
+  
+                    <p>
+                      There is a problem that we need to fix. A wonderful serenity has taken possession of my entire
+                      soul,
+                      like these sweet mornings of spring which I enjoy with my whole heart.
+                      like these sweet mornings of spring which I enjoy with my whole heart.
+                      There is a problem that we need to fix. A wonderful serenity has taken possession of my entire
+                      soul,
+                      like these sweet mornings of spring which I enjoy with my whole heart.
+                      like these sweet mornings of spring which I enjoy with my whole heart.
+                    </p>
+                    
+                  </div>
 
-    
-     }
-     document.getElementById("defaultTab").click(); 
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <!-- Widget: user widget style 2 -->
+              <div class="card card-widget widget-user-2">
+                <!-- Add the bg color to the header using any of the bg-* classes -->
+                <div class="widget-user-header bg-warning">
+                  <div class="widget-user-image">
+                    <img class="img-circle elevation-2" src="dist/img/user7-128x128.jpg" alt="User Avatar">
+                  </div>
+                  <!-- /.widget-user-image -->
+                  <h3 class="widget-user-username">Nadia Carmichael</h3>
+                  <h5 class="widget-user-desc">Lead Developer</h5>
+                </div>
+                <div class="card-footer p-0">
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Projects <span class="float-right badge bg-primary">31</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Tasks <span class="float-right badge bg-info">5</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Completed Projects <span class="float-right badge bg-success">12</span>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="#" class="nav-link">
+                        Followers <span class="float-right badge bg-danger">842</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!-- /.widget-user -->
+            
+            </div>
+          </div>
+           
+          </section>
+          <!-- /.Left col -->
+          <!-- right col (We are only adding the ID to make the widgets sortable)-->
+          <section class="col-lg-3 connectedSortable">
 
-     var slideIndex = 1;
-      showSlides(slideIndex);
+            <div class="col-lg-12">
+              <div class="card">
+                <div class="card-header">
+                  <h3 class="card-title">
+                    <i class="fas fa-text-width"></i>
+                    Secondary Block Quotes
+                  </h3>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body clearfix">
+                  <blockquote class="quote-secondary">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                  </blockquote>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <div class="col-md-12">
+              <button type="button" class="btn btn-block bg-gradient-info btn-lg" style="background-color: #0e7096; margin-bottom: 15px;">AL-SHAMIL</button>
+            </div>
+            <div class="col-lg-12">
+              <div class="card">
+               
+                <!-- /.card-header -->
+                <div class="card-body clearfix">
+                  <blockquote class="quote-secondary">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
 
-      function plusSlides(n) {
-        showSlides(slideIndex += n);
-      }
+                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                    <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+                  </blockquote>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+          </section>
+          <!-- right col -->
+        </div>
+        <!-- /.row (main row) -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  
 
-      function currentSlide(n) {
-        showSlides(slideIndex = n);
-      }
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
 
-      function showSlides(n) {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {slideIndex = 1}    
-        if (n < 1) {slideIndex = slides.length}
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";  
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";  
-        dots[slideIndex-1].className += " active";
-        //setTimeout(showSlides, 2000); 
-      }
-      </script>
-  </body>
+
+
+ 
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": true,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+  
+</script>
+<script>
+  var ctx = document.getElementById('pieChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        labels: ['IB', 'MB', 'ATM', 'IVR', 'Branch'],
+        datasets: [{
+            label: 'PieChart',
+            data: [0, 57, 26.6, 14.3, 0],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(147,112,219)',
+                'rgb(255,165,0)',
+                'rgb(127,255,212)',
+                'rgb(153, 102, 255)'
+            ],
+            hoverOffset: 4
+        }]
+    },
+  options:{
+    legend:{
+      position:'bottom'
+    }
+  }
+});
+</script>
+<script>
+  var ctx = document.getElementById('donutChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Non Digitized', 'Digitized'],
+        datasets: [{
+            label: 'DonutChart',
+            data: [0, 100],
+            backgroundColor: [
+                'rgb(255,165,0)',
+                'rgb(147,112,219)'
+            ],
+            hoverOffset: 4
+        }]
+    },
+    options:{
+    legend:{
+      position:'bottom'
+    }
+  }
+});
+</script>
+</body>
 </html>
