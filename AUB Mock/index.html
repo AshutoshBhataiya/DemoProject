@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AUB Mock</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+  </head>
+  <body>
+    <!--full body-->
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <img src="./AUB_Logo.jpg">
+        </div>
+        <div class="icons">
+          <i class="fa fa-user-circle-o" aria-hidden="true"></i>	
+          <i class="fa fa-question-circle" aria-hidden="true"></i>	
+          <i class="fa fa-cog"></i>
+          <i class="fa fa-bell"></i>
+        </div>
+        <div class="searchbar">
+          <div class="search">
+            <form action="#">
+              <input type="text" placeholder=" Search" name="search">
+              <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+            </button>
+          </form>
+          </div>
+        </div>
+        
+      </div>
+      <div class="main">
+        <div class="navbar">
+          <div class="navbar">
+            <a href="#home">Home</a>
+            <a href="#news">News</a>
+            <div class="dropdown">
+              <button class="dropbtn">Dropdown 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+            <a href="#sec1">Section 1</a> 
+            <a href="#sec2">Section 2</a> 
+            <a href="#sec3">Section 3</a> 
+          </div>
+        </div>
+        <div class="content">
+          <div class="leftTab">
+            <div class="tabPane">
+              <div class="tab">
+                <button class="tablinks" onclick="openPage(event, 'Tab1')" id="defaultTab">Home</button>
+                <button class="tablinks" onclick="openPage(event, 'Tab2')">Welcome XYZ</button>
+                <button class="tablinks" onclick="openPage(event, 'Tab3')">Requests</button>
+                <button class="tablinks" onclick="openPage(event, 'Tab4')">360 View</button>
+                
+              </div>
+              
+              <!-- Tab content -->
+              <div id="Tab1" class="tabcontent">
+                <div class="slideshow-container">
+                  <div class="mySlides fade">                   
+                    <img src="./Internet-Banking-630-px-by-330-px.jpg" height="300" width="100%">                    
+                  </div>
+                  <div class="mySlides fade">                    
+                    <img src="./AUB.jpg" height="300" width="100%" >                    
+                  </div>                 
+                  <div class="mySlides fade">                   
+                    <img src="./AUB-Double-Swipe-Internet-Banking-630x360.jpg" height="300" width="100%" >                    
+                  </div>
+                  
+                  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  
+                  </div>
+                  <br>
+                  
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                  </div>
+                  
+              </div>
+              
+              <div id="Tab2" class="tabcontent">
+                <h3>Tab 2</h3>
+                <p>This is my tab</p>
+                <h3>Tab 3</h3>
+                <p>Requests Tab</p>
+              </div>
+              
+              <div id="Tab3" class="tabcontent">
+                <div class="tab">                  
+                  <button class="tablinks" onclick="openPage(event, 'pending')">Pending</button>
+                  <button class="tablinks" onclick="openPage(event, 'Tab3')">Approved</button>
+                  <button class="tablinks" onclick="openPage(event, 'Tab4')">Rejected</button>                  
+                </div>
+                
+                <!-- Tab content -->       
+                
+                <div id="pending" class="tabcontent">
+                  <h3>Pending Requests</h3>                  
+                </div>                
+                <div id="Tab3" class="tabcontent">
+                  <h3>Tab 3</h3>
+                  <p>Requests Tab</p>
+                  <h3>Tab 3</h3>
+                  <p>Requests Tab</p>
+                  
+                </div>
+                <div id="Tab4" class="tabcontent">
+                  <h3>Tab 4</h3>
+                  <p>360 View Tab</p>
+                </div>
+                <div id="Tab5" class="tabcontent">
+                  <h3>Tab 5</h3>
+                  <p> Tab 5</p>
+                </div>
+                
+              </div>
+              <div id="Tab4" class="tabcontent">
+                <h3>Tab 4</h3>
+                <p>360 View Tab</p>
+              </div>
+              <div id="Tab5" class="tabcontent">
+                <h3>Tab 5</h3>
+                <p> Tab 5</p>
+              </div>
+            </div>
+            <div class="branchCircular">
+              <h2>Branch Circulars</h2> 
+              <marquee direction="up"  scrollamount="1" height="50%">
+                <a href="#"><p>From 1st May 2021, the interest rates will be changed.</p></a>
+                <a href="#"><p>There will be a meeting for re-evaluation of this pandemic situation on 25 April, 2021.</p></a>
+            </marquee>
+            </div>
+            <div class="aubForms">
+              <h2>AUB Forms</h2>
+              <p><a href="#">New User Form</a></p>
+              <p><a href="#">Complaint Form</a></p>
+              <p><a href="#">KYC Form</a></p>
+              <p><a href="#">New Offers Form</a></p>
+            </div>
+          </div>
+          
+          <div class="rightTab">
+            <div class="quickLinks">
+              <h2> Quick Links </h2>
+              <p> 
+                <a href="https://www.ahliunited.com.kw/en/home">AUB Website </a>
+              </p>             
+              <p>
+                <a href="#">AUB KYC Portal </a>
+              </p>             
+              <p>
+                <a href="#">New Offers </a>
+              </p> 
+              
+            </div>
+            <div class="alShamil">
+              <a href="#"><img src="./alshamil.PNG" height="100%" width="100%"><a></a>
+            </div>
+            <div class="aubLinks">
+              <h2> Links </h2>
+              <p><a href="#">AUB Kuwait</a></p>
+              <p><a href="#">AUB Bahrain</a></p>
+              <p><a href="#">Terms and Conditions</a></p>
+              <p><a href="#">Contact Us</a></p>
+              <p><a href="#">Feedback</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function openPage(evt, pageName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(pageName).style.display = "block";
+      evt.currentTarget.className += " active";
+
+    
+     }
+     document.getElementById("defaultTab").click(); 
+
+     var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        //setTimeout(showSlides, 2000); 
+      }
+      </script>
+  </body>
+</html>
